@@ -1,0 +1,211 @@
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zarnal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff3366;
+      --bg: #ffffff;
+      --text: #111;
+      --card-bg: #fdfdfd;
+      --card-radius: 24px;
+      --shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 1.2rem 1rem;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #ff3366, #ff80ab);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2rem 1.2rem;
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: var(--transition);
+      cursor: pointer;
+      aspect-ratio: 1 / 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), transparent);
+      transform: rotate(25deg);
+      top: -60%;
+      left: -60%;
+      transition: var(--transition);
+      pointer-events: none;
+    }
+
+    .card:hover::after {
+      top: 0;
+      left: 0;
+    }
+
+    .card span {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      transition: var(--transition);
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      letter-spacing: 0.5px;
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+      background: #fff0f6;
+    }
+
+    .card:hover span {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    @media (max-width: 768px) {
+      main {
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+      }
+
+      .card {
+        padding: 1.5rem 1rem;
+      }
+
+      .card span {
+        font-size: 2.2rem;
+      }
+
+      .card p {
+        font-size: 1rem;
+      }
+
+      header {
+        font-size: 1.3rem;
+        padding: 1rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+
+  <header>
+    Love with Spark ❤️✨
+  </header>
+
+  <main>
+    <div class="card" onclick="location.href='https://zarnal.odoo.com/shayari'">
+      <span>💌</span>
+      <p>Shayari</p>
+    </div>
+    <div class="card" onclick="location.href='https://zarnal.odoo.com/babyname'">
+      <span>👶</span>
+      <p>Baby Name</p>
+    </div>
+    <div class="card" onclick="location.href='https://zarnal.odoo.com/lovequotes'">
+      <span>💬</span>
+      <p>Love Quotes</p>
+    </div>
+    <div class="card" onclick="location.href='https://zarnal.odoo.com/morsecode'">
+      <span>📡</span>
+      <p>Morse Code</p>
+    </div>
+    <div class="card" onclick="location.href='https://zarnal.odoo.com/lovedairy'">
+      <span>📖</span>
+      <p>Love Diary</p>
+    </div>
+    <div class="card" onclick="location.href='https://zarnal.odoo.com/funcollector'">
+      <span>🎮</span>
+      <p>Fun</p>
+    </div>
+    <div class="card" onclick="location.href='https://zarnal.odoo.com/shorts'">
+      <span>🎬</span>
+      <p>Shorts</p>
+    </div>
+    <div class="card" onclick="location.href='https://zarnal.odoo.com/fancyfont'">
+      <span>✨</span>
+      <p>Fancy Fonts</p>
+    </div>
+    
+     <div class="card" onclick="location.href='https://zarnal.github.io/ZARNAL/echobae.html'">
+      <span>📣</span>
+      <p>EchoBae</p>
+    </div>
+    
+     <div class="card" onclick="location.href='https://zarnal.odoo.com/emojis'">
+      <span>🧋</span>
+      <p>emojis world</p>
+    </div>
+    
+     <div class="card" onclick="location.href='https://in.pinterest.com/search/pins/?rs=typed&amp;q=Mehndi%20designs'">
+      <span>🫳</span>
+      <p>Mahendi Designs</p>
+    </div>
+
+ <div class="card" onclick="location.href='https://in.pinterest.com/search/pins/?rs=typed&amp;q=Nailart'">
+      <span>💅</span>
+      <p>NailArt</p>
+    </div>
+    
+    <div class="card" onclick="location.href='https://zarnal.odoo.com/textemoji'">
+      <span>-`♡´-</span>
+      <p>TEXT emoji</p>
+    </div>
+
+    
+    
+  </main>
